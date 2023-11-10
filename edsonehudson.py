@@ -71,10 +71,3 @@ class DupraDeDois(Screen):
     
     def tela2(self, instance):
         self.manager.current = 'segunda'
-
-'''    def showall(self, instance):
-        print("mostrar tudo")
-        consulta = "SELECT * FROM duplas;"
-        self.cursor.execute(consulta)
-        self.conexao.commit()
-        print("deu certo")'''

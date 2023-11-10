@@ -26,16 +26,16 @@ class MostrarTudo(Screen):
         self.layout = BoxLayout(orientation = 'vertical')
         self.grid = GridLayout(cols = 3, size_hint = (1,1))
 
-        self.btn = Button(text='MOSTRAR TUDO')
-        self.grid.add_widget(self.btn)
-        self.btn.bind(on_press=self.showall)
+        '''self.btn_voltar = Button(text='VOLTAR')
+        self.grid.add_widget(self.btn_voltar)
+        self.btn_voltar.bind(on_press=self.showall)'''
 
         print("mostrar tudo")
         consulta = "SELECT * FROM duplas;"
         self.cursor.execute(consulta)
         linhas = self.cursor.fetchall()
         for linha in linhas:
-            self.lbl_select=Label(text= f"ID: {linha[0]}\n Nome da Dupla: {linha[1]}\n Ano de Início: {linha[2]}\nCidade Natal: {linha[3]}\nEm Atividade: {linha[4]}")
+            self.lbl_select=Label(text= f"ID: {linha[0]}\n Nome da Dupla:{linha[1]}\n Ano de Início:{linha[2]}\nCidade Natal:{linha[3]}\nEm Atividade:{linha[4]}")
             #self.layout.add_widget(self.lbl_select)
             self.grid.add_widget(self.lbl_select)
             self.conexao.commit()
