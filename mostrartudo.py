@@ -5,7 +5,6 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import Screen
-#import mysql.connector
 
 class Select(Screen):
     def __init__(self, **kw):
